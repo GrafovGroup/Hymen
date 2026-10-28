@@ -1,0 +1,445 @@
+{
+  "regions": {
+    "bc": [
+      "British Columbia",
+      "Colombie-Britannique",
+      "HealthLink BC",
+      "https://www.healthlinkbc.ca/find-care",
+      "https://www.cpsbc.ca/"
+    ],
+    "ab": [
+      "Alberta",
+      "Alberta",
+      "Alberta Health Services",
+      "https://www.albertahealthservices.ca/find/Page12605.aspx",
+      "https://www.cpsa.ca/"
+    ],
+    "sk": [
+      "Saskatchewan",
+      "Saskatchewan",
+      "Saskatchewan Health Authority",
+      "https://www.saskhealthauthority.ca/facilities-locations",
+      "https://www.cps.sk.ca/"
+    ],
+    "mb": [
+      "Manitoba",
+      "Manitoba",
+      "Manitoba · Accessing Health Care",
+      "https://www.gov.mb.ca/health/access.html",
+      "https://www.cpsm.mb.ca/"
+    ],
+    "on": [
+      "Ontario",
+      "Ontario",
+      "Ontario · Health811",
+      "https://www.ontario.ca/page/your-health",
+      "https://register.cpso.on.ca/"
+    ],
+    "qc": [
+      "Québec",
+      "Québec",
+      "Québec · Finding a health resource",
+      "https://www.quebec.ca/en/health/finding-a-resource",
+      "https://form.cmq.org/fr/proteger-le-public/acceder-repertoire-medecins"
+    ],
+    "ns": [
+      "Nova Scotia",
+      "Nouvelle-Écosse",
+      "Nova Scotia Health · Primary care",
+      "https://www.nshealth.ca/primary-care-and-family-medicine",
+      "https://www.cpsns.ns.ca/"
+    ],
+    "nb": [
+      "New Brunswick",
+      "Nouveau-Brunswick",
+      "New Brunswick · Tele-Care 811",
+      "https://www.gnb.ca/en/topic/health-wellness/access-health-care/tele-care-811.html",
+      "https://www.cpsnb.org/"
+    ],
+    "pe": [
+      "Prince Edward Island",
+      "Île-du-Prince-Édouard",
+      "Health PEI · Access to Care",
+      "https://www.princeedwardisland.ca/en/information/health-pei/access-to-care-0",
+      "https://www.cpspei.ca/"
+    ],
+    "nl": [
+      "Newfoundland and Labrador",
+      "Terre-Neuve-et-Labrador",
+      "NL Health Services · Find healthcare",
+      "https://nlhealthservices.ca/find-health-care/",
+      "https://www.cpsnl.ca/"
+    ],
+    "yt": [
+      "Yukon",
+      "Yukon",
+      "Yukon · Hospitals and health centres",
+      "https://yukon.ca/en/health-and-wellness/care-services/find-hospital-or-health-centre",
+      "https://fmrac.ca/about-members/"
+    ],
+    "nt": [
+      "Northwest Territories",
+      "Territoires du Nord-Ouest",
+      "NTHSSA · Yellowknife health services",
+      "https://www.nthssa.ca/en/health-services-yellowknife-region",
+      "https://fmrac.ca/about-members/"
+    ],
+    "nu": [
+      "Nunavut",
+      "Nunavut",
+      "Nunavut · Medical travel handbook",
+      "https://www.gov.nu.ca/sites/default/files/documents/2025-11/Health_-_NU_Medical_Travel_Handbook_EN_WEB_NOV2025.pdf",
+      "https://fmrac.ca/about-members/"
+    ]
+  },
+  "cities": [
+    {
+      "slug": "vancouver",
+      "name": "Vancouver",
+      "region": "bc",
+      "planning": "When searching Vancouver, confirm whether the appointment is in the city itself or another Metro Vancouver municipality. Ask which location handles assessment and which handles any treatment."
+    },
+    {
+      "slug": "victoria",
+      "name": "Victoria",
+      "region": "bc",
+      "planning": "For a Victoria appointment, ask whether every stage can take place on Vancouver Island. If a mainland referral is proposed, agree on who provides follow-up on the island before arranging travel."
+    },
+    {
+      "slug": "surrey",
+      "name": "Surrey",
+      "region": "bc",
+      "planning": "Use Surrey as the location in the provincial service search. If a provider proposes a Vancouver appointment, clarify whether later visits can happen in Surrey and how records will be shared."
+    },
+    {
+      "slug": "burnaby",
+      "name": "Burnaby",
+      "region": "bc",
+      "planning": "Search Burnaby separately from Vancouver when comparing appointment locations. Confirm whether the consultation address and the procedure facility are the same before choosing transport."
+    },
+    {
+      "slug": "richmond",
+      "name": "Richmond",
+      "region": "bc",
+      "planning": "Specify Richmond, British Columbia, rather than Richmond Hill, Ontario, in a provider search. Ask about the language available for both the appointment and written aftercare instructions."
+    },
+    {
+      "slug": "kelowna",
+      "name": "Kelowna",
+      "region": "bc",
+      "planning": "For care in Kelowna, clarify whether a referral remains within the Okanagan or requires travel elsewhere. Ask which follow-up visits can be arranged close to home."
+    },
+    {
+      "slug": "abbotsford",
+      "name": "Abbotsford",
+      "region": "bc",
+      "planning": "When comparing Abbotsford and other Fraser Valley locations, ask for the exact treatment address. Plan the number of return visits before committing to an appointment outside your community."
+    },
+    {
+      "slug": "nanaimo",
+      "name": "Nanaimo",
+      "region": "bc",
+      "planning": "Ask whether assessment and follow-up are available in Nanaimo if treatment is proposed in Victoria or on the mainland. Include any ferry or overnight arrangements in your planning questions."
+    },
+    {
+      "slug": "kamloops",
+      "name": "Kamloops",
+      "region": "bc",
+      "planning": "Start a service search with Kamloops rather than assuming an appointment must be in a coastal city. If travel is recommended, ask how the local clinician will stay involved in aftercare."
+    },
+    {
+      "slug": "calgary",
+      "name": "Calgary",
+      "region": "ab",
+      "planning": "The Alberta facility directory lists several Calgary sites. Verify the specific clinic, building and service named on a referral; a hospital listing alone does not confirm that an intimate procedure is offered."
+    },
+    {
+      "slug": "edmonton",
+      "name": "Edmonton",
+      "region": "ab",
+      "planning": "The Alberta facility directory includes the Lois Hole Hospital for Women and other Edmonton sites. Use the directory to find the relevant service contact and ask about referral requirements, rather than assuming a named hospital accepts direct bookings."
+    },
+    {
+      "slug": "red-deer",
+      "name": "Red Deer",
+      "region": "ab",
+      "planning": "Red Deer Regional Hospital Centre appears in the Alberta facility directory. Confirm whether the required assessment can be arranged locally before considering travel to Calgary or Edmonton."
+    },
+    {
+      "slug": "lethbridge",
+      "name": "Lethbridge",
+      "region": "ab",
+      "planning": "The Alberta directory lists Chinook Regional Hospital in Lethbridge. Ask the referring clinician which service fits your concern and whether any later appointments would take place outside southern Alberta."
+    },
+    {
+      "slug": "saskatoon",
+      "name": "Saskatoon",
+      "region": "sk",
+      "planning": "The provincial directory distinguishes Saskatoon City Hospital, Royal University Hospital and St. Paul’s Hospital. Confirm the actual clinic site on your referral before making transport arrangements."
+    },
+    {
+      "slug": "regina",
+      "name": "Regina",
+      "region": "sk",
+      "planning": "The provincial directory lists both Regina General Hospital and Pasqua Hospital. Ask which service and site your appointment relates to; the presence of a hospital does not establish availability of a specific procedure."
+    },
+    {
+      "slug": "winnipeg",
+      "name": "Winnipeg",
+      "region": "mb",
+      "planning": "Manitoba’s access-to-care resource links to local care searches and Health Links–Info Santé. Use it to identify a starting point in Winnipeg, then confirm whether a specialist referral is needed for your concern."
+    },
+    {
+      "slug": "ottawa",
+      "name": "Ottawa",
+      "region": "on",
+      "planning": "For an Ottawa–Gatineau search, distinguish Ontario appointments from Québec appointments. Ask where the treating clinician is registered and how records and follow-up would be handled across the provincial boundary."
+    },
+    {
+      "slug": "mississauga",
+      "name": "Mississauga",
+      "region": "on",
+      "planning": "Search Mississauga by your postal code to avoid treating every GTA listing as nearby. If a clinic uses a Toronto address for surgery, confirm where consultation and follow-up will happen."
+    },
+    {
+      "slug": "brampton",
+      "name": "Brampton",
+      "region": "on",
+      "planning": "When exploring Brampton care, ask whether an advertised GTA service is actually delivered in Brampton. Confirm the number of visits required at any other location before booking."
+    },
+    {
+      "slug": "hamilton",
+      "name": "Hamilton",
+      "region": "on",
+      "planning": "Keep Hamilton and neighbouring Burlington addresses separate when reviewing options. Ask whether your initial assessment and any procedure would be at the same facility and who handles follow-up locally."
+    },
+    {
+      "slug": "london",
+      "name": "London",
+      "region": "on",
+      "planning": "Use London, Ontario, in searches to avoid results for the United Kingdom. Ask for the Canadian clinician’s provincial registration and a quote in Canadian dollars."
+    },
+    {
+      "slug": "kitchener-waterloo",
+      "name": "Kitchener–Waterloo",
+      "region": "on",
+      "planning": "Check whether an appointment is in Kitchener, Waterloo or Cambridge. Search by the actual address and ask where repeat visits will occur before comparing travel time."
+    },
+    {
+      "slug": "windsor",
+      "name": "Windsor",
+      "region": "on",
+      "planning": "Separate Windsor care from cross-border offers in Detroit. Before considering treatment outside Canada, ask about licensing, insurance, records and responsibility for complications after returning to Ontario."
+    },
+    {
+      "slug": "oshawa",
+      "name": "Oshawa",
+      "region": "on",
+      "planning": "For an Oshawa or Durham Region search, confirm whether each appointment is local or in Toronto. Ask who will manage in-person follow-up if you choose a provider outside Durham."
+    },
+    {
+      "slug": "barrie",
+      "name": "Barrie",
+      "region": "on",
+      "planning": "Start with Barrie and your postal code in the Ontario service finder. If a GTA consultation is proposed, ask which parts of assessment and recovery can remain close to home."
+    },
+    {
+      "slug": "kingston",
+      "name": "Kingston",
+      "region": "on",
+      "planning": "Specify Kingston, Ontario, when searching, and confirm the exact specialist clinic rather than only the hospital name. Ask whether a referral must be sent before an appointment can be arranged."
+    },
+    {
+      "slug": "guelph",
+      "name": "Guelph",
+      "region": "on",
+      "planning": "Compare Guelph locations with any proposed Waterloo Region appointment using the actual address. Ask whether follow-up would stay with the same team if treatment takes place outside Guelph."
+    },
+    {
+      "slug": "sudbury",
+      "name": "Greater Sudbury",
+      "region": "on",
+      "planning": "Use Greater Sudbury or Sudbury in the service finder. If a southern Ontario referral is proposed, request a clear plan for the return journey and local assessment of any recovery concerns."
+    },
+    {
+      "slug": "thunder-bay",
+      "name": "Thunder Bay",
+      "region": "on",
+      "planning": "For a Thunder Bay consultation, ask whether a specialist assessment can begin locally. If travel outside northwestern Ontario is proposed, clarify follow-up responsibilities before arranging transport or accommodation."
+    },
+    {
+      "slug": "st-catharines",
+      "name": "St. Catharines",
+      "region": "on",
+      "planning": "When searching St. Catharines and Niagara, verify the municipality and clinic address for each visit. Ask whether a Niagara appointment leads to treatment locally or at another Ontario facility."
+    },
+    {
+      "slug": "quebec-city",
+      "name": "Québec City",
+      "region": "qc",
+      "planning": "Use Québec City or Ville de Québec to distinguish the city from province-wide results. The Québec resource finder can help identify a starting point; ask the service directly about specialist assessment and referral requirements."
+    },
+    {
+      "slug": "laval",
+      "name": "Laval",
+      "region": "qc",
+      "planning": "Search Laval separately from Montréal when comparing locations. Ask whether consultation and treatment would both take place in Laval and whether written follow-up instructions are available in your preferred language."
+    },
+    {
+      "slug": "gatineau",
+      "name": "Gatineau",
+      "region": "qc",
+      "planning": "For Gatineau and the Outaouais, clarify whether a proposed appointment is in Québec or Ottawa. Confirm the clinician’s regulator and ask how any cross-province referral, charges and follow-up would work."
+    },
+    {
+      "slug": "longueuil",
+      "name": "Longueuil",
+      "region": "qc",
+      "planning": "Use Longueuil or the exact South Shore municipality when searching. If care is proposed on Montréal Island, ask whether return appointments can be arranged on the South Shore."
+    },
+    {
+      "slug": "sherbrooke",
+      "name": "Sherbrooke",
+      "region": "qc",
+      "planning": "Start with Sherbrooke in the Québec resource finder. Ask whether the assessment and subsequent appointments can remain in Estrie before planning travel to another region."
+    },
+    {
+      "slug": "trois-rivieres",
+      "name": "Trois-Rivières",
+      "region": "qc",
+      "planning": "For Trois-Rivières, specify the local service rather than searching only between Montréal and Québec City. Ask where your referral will be sent and how many in-person appointments are expected."
+    },
+    {
+      "slug": "saguenay",
+      "name": "Saguenay",
+      "region": "qc",
+      "planning": "Clarify whether a Saguenay appointment is in Chicoutimi, Jonquière or another location. Ask for the exact clinic and discuss follow-up arrangements if a referral takes you outside the region."
+    },
+    {
+      "slug": "halifax",
+      "name": "Halifax",
+      "region": "ns",
+      "planning": "For Halifax-area searches, confirm whether the appointment is on the Halifax or Dartmouth side of the harbour. The provincial primary-care resource offers a starting point if you need help arranging an assessment."
+    },
+    {
+      "slug": "moncton",
+      "name": "Moncton",
+      "region": "nb",
+      "planning": "For Moncton and neighbouring Dieppe or Riverview, ask for the precise clinic location and language of care. New Brunswick’s bilingual Tele-Care service can help you navigate community services."
+    },
+    {
+      "slug": "saint-john",
+      "name": "Saint John",
+      "region": "nb",
+      "planning": "Specify Saint John, New Brunswick, rather than St. John’s, Newfoundland and Labrador. Ask whether any specialist appointment is local and which team will receive your referral."
+    },
+    {
+      "slug": "fredericton",
+      "name": "Fredericton",
+      "region": "nb",
+      "planning": "Start a Fredericton care search with your community and language preference. If an appointment elsewhere in New Brunswick is proposed, ask about local follow-up and the expected number of visits."
+    },
+    {
+      "slug": "charlottetown",
+      "name": "Charlottetown",
+      "region": "pe",
+      "planning": "Health PEI’s access-to-care resource is a starting point for Charlottetown residents. If an off-island assessment is proposed, ask who coordinates the referral and confirm travel and coverage arrangements before booking."
+    },
+    {
+      "slug": "st-johns",
+      "name": "St. John’s",
+      "region": "nl",
+      "planning": "Specify St. John’s, Newfoundland and Labrador, in the provincial directory. If you are travelling from elsewhere on the island or from Labrador, ask whether the initial conversation can happen remotely and what requires an in-person visit."
+    },
+    {
+      "slug": "whitehorse",
+      "name": "Whitehorse",
+      "region": "yt",
+      "planning": "The Yukon hospital and health-centre resource includes Whitehorse care options. Ask whether the assessment can be arranged locally and who will coordinate any referral outside Yukon; confirm eligibility before assuming travel assistance."
+    },
+    {
+      "slug": "yellowknife",
+      "name": "Yellowknife",
+      "region": "nt",
+      "planning": "Use the Yellowknife-region health-services page to identify a local starting point. If a referral outside the Northwest Territories is proposed, ask who coordinates records, travel and follow-up after your return."
+    },
+    {
+      "slug": "iqaluit",
+      "name": "Iqaluit",
+      "region": "nu",
+      "planning": "Nunavut publishes a medical-travel handbook with Iqaluit coordination contacts. Ask your care team what can be assessed locally, whether travel is clinically required and what authorisation is needed; elective cosmetic travel should not be assumed covered."
+    },
+    {
+      "slug": "vaughan",
+      "name": "Vaughan",
+      "region": "on",
+      "planning": "For a Vaughan search, clarify whether the clinic address is in Woodbridge, Maple or another part of the city. Confirm whether a North York listing would require separate travel for every follow-up."
+    },
+    {
+      "slug": "markham",
+      "name": "Markham",
+      "region": "on",
+      "planning": "Use Markham and your postal code to narrow a GTA search. Ask whether consultation, treatment and follow-up are delivered at the Markham location or split between facilities."
+    },
+    {
+      "slug": "richmond-hill",
+      "name": "Richmond Hill",
+      "region": "on",
+      "planning": "Specify Richmond Hill, Ontario, rather than Richmond, British Columbia. Our Toronto-area research includes a public Valespring hymenoplasty page; use the Toronto guide to review that research and verify current details directly."
+    },
+    {
+      "slug": "oakville",
+      "name": "Oakville",
+      "region": "on",
+      "planning": "When comparing Oakville and Mississauga options, confirm the site for each stage of care. A clinic’s service area may be wider than the actual location where an appointment takes place."
+    },
+    {
+      "slug": "burlington",
+      "name": "Burlington",
+      "region": "on",
+      "planning": "Distinguish Burlington appointments from Hamilton or Oakville locations in regional search results. Ask who would provide local follow-up if an intervention is proposed elsewhere."
+    },
+    {
+      "slug": "milton",
+      "name": "Milton",
+      "region": "on",
+      "planning": "For Milton, ask whether the first assessment can happen locally before considering another Halton or GTA site. Confirm the destination of any specialist referral and whether it has been accepted."
+    },
+    {
+      "slug": "whitby",
+      "name": "Whitby",
+      "region": "on",
+      "planning": "Search Whitby and the actual clinic address rather than assuming every Durham Region result is local. If repeat visits are proposed in Oshawa or Toronto, discuss the travel plan before booking."
+    },
+    {
+      "slug": "ajax",
+      "name": "Ajax",
+      "region": "on",
+      "planning": "When searching Ajax, separate assessment locations from any procedure site in Pickering, Oshawa or Toronto. Ask which visits require an accompanying adult and where those visits take place."
+    },
+    {
+      "slug": "pickering",
+      "name": "Pickering",
+      "region": "on",
+      "planning": "For Pickering, confirm whether a service is based in the city or elsewhere in Durham or Toronto. Ask how follow-up information will reach your usual clinician if you attend another facility."
+    },
+    {
+      "slug": "coquitlam",
+      "name": "Coquitlam",
+      "region": "bc",
+      "planning": "Check whether a Tri-Cities appointment is in Coquitlam, Port Coquitlam or Port Moody. Use the actual location in the service finder and clarify where subsequent visits would happen."
+    },
+    {
+      "slug": "delta",
+      "name": "Delta",
+      "region": "bc",
+      "planning": "For Delta, confirm whether the appointment is in North Delta, Ladner or Tsawwassen. Ask whether any proposed referral changes the treatment location to another Metro Vancouver municipality."
+    },
+    {
+      "slug": "langley",
+      "name": "Langley",
+      "region": "bc",
+      "planning": "Clarify whether a Langley appointment is in the City of Langley or the Township of Langley. Confirm the address for each visit before comparing it with Surrey or other Fraser Valley options."
+    }
+  ]
+}

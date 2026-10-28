@@ -1,0 +1,8 @@
+work/
+.DS_Store
+__pycache__/
+outputs/*.zip
+outputs/*.png
+outputs/*.jpg
+outputs/*.jpeg
+outputs/production/

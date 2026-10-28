@@ -1,0 +1,13 @@
+{
+  "content_pages": 156,
+  "languages": [
+    "en-CA",
+    "fr-CA"
+  ],
+  "local_links_and_assets": "passed",
+  "canonical_and_language_targets": "passed",
+  "production_indexing": "enabled",
+  "preview_indexing": "disabled",
+  "deployed": false,
+  "real_form_delivery": "not verified"
+}

@@ -1,0 +1,41 @@
+{
+  "viewports": [
+    1440,
+    768,
+    375,
+    320
+  ],
+  "pages": 156,
+  "renderChecks": 624,
+  "overflows": [],
+  "errors": [],
+  "badResponses": [],
+  "badLinks": [],
+  "externalRequests": [],
+  "enquiryNetworkRequests": 0,
+  "storage": {
+    "local": 0,
+    "session": 0,
+    "cookie": "",
+    "url": "http://127.0.0.1:56556/enquiry/"
+  },
+  "checks": [
+    "60 city links per language; accent search, region filter, empty state and navigation",
+    "City directory readable without JavaScript",
+    "French validation, summary and completion",
+    "French comparison, filters and checklist",
+    "Page-matched bidirectional language switch",
+    "Guided starting-point expansion and navigation",
+    "Comparison hide, restore, minimum selection and reload reset",
+    "Region filters and empty state",
+    "Region deep links",
+    "Checklist count and reset",
+    "Required topic, province, adult validation",
+    "Disabled sample contact fields",
+    "Review summary and edit flow",
+    "Truthful completion",
+    "Reset clears selections",
+    "Zero enquiry requests or browser persistence",
+    "Mobile navigation and Escape"
+  ]
+}

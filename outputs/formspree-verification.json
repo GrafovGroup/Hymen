@@ -1,0 +1,18 @@
+{
+  "pages": 6,
+  "renderChecks": 24,
+  "overflow": [],
+  "errors": [],
+  "checks": [
+    "Required-field validation",
+    "English and French payload and consent",
+    "422 and 429 error handling",
+    "Network failure retains input",
+    "Duplicate submission prevention",
+    "Success clears entries",
+    "No browser storage",
+    "Native POST without JavaScript"
+  ],
+  "liveSubmissions": 0,
+  "delivery": "All Formspree requests intercepted; actual inbox delivery not tested"
+}

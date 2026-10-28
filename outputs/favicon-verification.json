@@ -1,0 +1,14 @@
+{
+  "outputs/site": {
+    "pages_checked": 158,
+    "all_icon_links_and_files": "passed",
+    "fallback_sizes": "passed"
+  },
+  "dist": {
+    "pages_checked": 158,
+    "all_icon_links_and_files": "passed",
+    "fallback_sizes": "passed"
+  },
+  "search_verification_preserved": true,
+  "visual_check": "16px, 32px and 64px on white, dark, gray and pink backgrounds"
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="880" viewBox="0 0 1000 880" role="img" aria-labelledby="title desc">
+<title id="title">Deux formes courantes de l’hymen</title><desc id="desc">Schémas simplifiés du tissu hyménal en croissant et en anneau. Ces images ne représentent ni les antécédents sexuels ni un résultat avant-après.</desc>
+<rect width="1000" height="880" fill="#fff6f8"/>
+<text x="500" y="78" text-anchor="middle" font-family="Georgia,serif" font-size="42" fill="#502b3b">Comprendre le tissu hyménal</text>
+<text x="500" y="118" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#795d69">Deux formes courantes · schémas simplifiés</text>
+<g stroke="#d7a2b6" stroke-width="2" fill="#f7e3eb"><ellipse cx="278" cy="360" rx="167" ry="192"/><ellipse cx="722" cy="360" rx="167" ry="192"/></g>
+<ellipse cx="278" cy="345" rx="126" ry="147" fill="#fffafb"/>
+<path d="M153 346 C160 450 211 489 278 489 C345 489 396 450 403 346 C419 462 368 536 278 540 C188 536 137 462 153 346Z" fill="#bf6688"/>
+<ellipse cx="722" cy="360" rx="140" ry="164" fill="#bf6688"/>
+<ellipse cx="722" cy="360" rx="108" ry="128" fill="#fffafb"/>
+<g font-family="Arial,sans-serif" font-size="19" fill="#795d69" text-anchor="middle"><text x="278" y="337">Ouverture</text><text x="278" y="364">vaginale</text><text x="722" y="352">Ouverture</text><text x="722" y="379">vaginale</text></g>
+<g fill="#502b3b" text-anchor="middle"><text x="278" y="598" font-family="Georgia,serif" font-size="29">En croissant</text><text x="722" y="598" font-family="Georgia,serif" font-size="29">En anneau</text><text x="278" y="632" font-family="Arial,sans-serif" font-size="17">Tissu sur le bord inférieur</text><text x="722" y="632" font-family="Arial,sans-serif" font-size="17">Tissu autour de l’ouverture</text></g>
+<rect x="328" y="683" width="24" height="24" rx="4" fill="#bf6688"/><text x="367" y="702" font-family="Arial,sans-serif" font-size="19" fill="#502b3b">Zone rose = tissu hyménal</text>
+<path d="M100 745H900" stroke="#e9cfd9"/>
+<text x="500" y="786" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" fill="#502b3b">La forme, la taille et l’épaisseur varient naturellement.</text>
+<text x="500" y="821" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#795d69">Ces images ne révèlent ni résultat chirurgical ni antécédents sexuels.</text>
+</svg>
