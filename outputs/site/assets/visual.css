@@ -9,3 +9,6 @@
 @media(prefers-reduced-motion:reduce){.guide-card,.guide-card img{transition:none}.guide-card:hover,.guide-card:hover img{transform:none}}
 @media print{.guide-card-grid{display:block}.guide-card{break-inside:avoid}.quick-paths{display:none}}
 .guide-card:first-child{border-color:#c391a6}.guide-card:first-child .guide-card-copy{background:#fff8fa}
+
+/* Keep every anatomical landmark visible at all screen sizes. */
+.editorial-banner.anatomy-diagram{height:auto;max-width:1000px;background:#fff6f8}.editorial-banner.anatomy-diagram img{height:auto;max-height:none;object-fit:contain}.anatomy-diagram figcaption a{text-decoration:underline}.guide-card-image:has(img[src*="-anatomy"]){height:auto;aspect-ratio:10/7}.guide-card-image img[src*="-anatomy"]{object-fit:contain}.guide-card:hover img[src*="-anatomy"]{transform:none}

@@ -11,7 +11,7 @@ for p in ROOT.rglob('*.html'):
   links=[('#procedures','Les interventions' if fr else 'Explore procedures'),('/compare/','Comparer les options' if fr else 'Compare options'),('/cities/','Ressources locales' if fr else 'Find local resources')]
   nav='<nav class="quick-paths wrap" aria-label="'+('Par où commencer' if fr else 'Choose your next step')+'">'+''.join('<a href="'+(href if href.startswith('#') else prefix+href)+'"><span>'+label+'</span><span aria-hidden="true">↗</span></a>' for href,label in links)+'</nav>'
   s=re.sub(r'<nav class="pathways wrap".*?</nav>',nav,s,count=1,flags=re.S)
-  data=[('hymenoplasty','Hyménoplastie' if fr else 'Hymenoplasty','pathway-botanical.webp','Comprendre la reconstruction de l’hymen, ses limites et les questions à poser.' if fr else 'Understand hymen reconstruction, its limitations and the questions to ask.'),('labiaplasty','Labiaplastie' if fr else 'Labiaplasty','labiaplasty-magnolia.png','Explorer la chirurgie des lèvres, les variations normales et les autres options.' if fr else 'Explore labial surgery, normal variation and alternatives.'),('perineoplasty','Périnéoplastie' if fr else 'Perineoplasty','perineoplasty-peony.png','Comprendre les préoccupations périnéales et préparer une évaluation individuelle.' if fr else 'Understand perineal concerns and prepare for an individual assessment.')]
+  data=[('hymenoplasty','Hyménoplastie' if fr else 'Hymenoplasty','pathway-botanical.webp','Comprendre la reconstruction de l’hymen, ses limites et les questions à poser.' if fr else 'Understand hymen reconstruction, its limitations and the questions to ask.'),('labiaplasty','Labiaplastie' if fr else 'Labiaplasty',('labiaplasty-anatomy-fr.svg' if fr else 'labiaplasty-anatomy.svg'),'Explorer la chirurgie des lèvres, les variations normales et les autres options.' if fr else 'Explore labial surgery, normal variation and alternatives.'),('perineoplasty','Périnéoplastie' if fr else 'Perineoplasty',('perineoplasty-anatomy-fr.svg' if fr else 'perineoplasty-anatomy.svg'),'Comprendre les préoccupations périnéales et préparer une évaluation individuelle.' if fr else 'Understand perineal concerns and prepare for an individual assessment.')]
   cards='<div class="guide-card-grid">'+''.join(f'<a class="guide-card" href="{prefix}/{slug}/"><div class="guide-card-image"><img src="/assets/{asset}" alt="" width="600" height="400" loading="lazy" decoding="async"></div><div class="guide-card-copy"><span class="guide-card-index">0{i+1} / '+(('Guide principal' if fr else 'Main guide') if i==0 else ('Guide pratique' if fr else 'Procedure guide'))+f'</span><h3>{title}</h3><p>{desc}</p><span class="guide-card-action">'+('Lire le guide' if fr else 'Read the guide')+' <span aria-hidden="true">↗</span></span></div></a>' for i,(slug,title,asset,desc) in enumerate(data))+'</div>'
   # Replace the old asymmetric card group, bounded by its section's closing tag.
   s=re.sub(r'<div class="procedure-grid">.*?</section>',cards+'</section>',s,count=1,flags=re.S)
@@ -28,14 +28,17 @@ for p in ROOT.rglob('*.html'):
   hero_end=s.find('</section>',s.find('<section class="hero"'))+10
   tail=s[hero_end:];tail=re.sub(r'<h2>(.*?)</h2>',lambda m:'<h2>'+m[1].replace('<em>','').replace('</em>','').replace('<br>',' ')+'</h2>',tail,flags=re.S)
   s=s[:hero_end]+tail
- # Match the procedure banners to the floral card artwork.
- for slug,asset,en_alt,fr_alt in [
-  ('labiaplasty','labiaplasty-magnolia.png','Blush magnolia blossom with gently layered petals','Fleur de magnolia rose aux pétales délicatement superposés'),
-  ('perineoplasty','perineoplasty-peony.png','Soft pink peony with rounded layers of petals','Pivoine rose aux pétales arrondis et superposés'),
+ # Procedure-specific, bilingual anatomical diagrams.
+ for slug,en_alt,fr_alt in [
+  ('labiaplasty','External vulvar anatomy with the labia minora highlighted','Anatomie externe de la vulve avec les petites lèvres mises en évidence'),
+  ('perineoplasty','External anatomy with the perineum highlighted between the vaginal opening and anus','Anatomie externe avec le périnée mis en évidence entre l’orifice vaginal et l’anus'),
  ]:
   if p.parent.name==slug:
-   flower='<figure class="editorial-banner wrap image-enhanced"><img src="/assets/'+asset+'" alt="'+(fr_alt if fr else en_alt)+'" width="1536" height="1024" loading="lazy" decoding="async"></figure>'
-   s=re.sub(r'<figure class="editorial-banner wrap image-enhanced">.*?</figure>',flower,s,count=1,flags=re.S)
+   s=re.sub(r'<figure class="guide-figure">.*?</figure>','',s,flags=re.S)
+   asset=slug+'-anatomy'+('-fr' if fr else '')+'.svg'
+   caption=('Repères anatomiques : ' if fr else 'Anatomical landmarks: ')
+   diagram='<figure class="editorial-banner wrap image-enhanced anatomy-diagram"><a href="/assets/'+asset+'" target="_blank" rel="noopener"><img src="/assets/'+asset+'" alt="'+(fr_alt if fr else en_alt)+'" width="1000" height="700" loading="lazy" decoding="async"></a><figcaption>'+caption+'<a href="https://www.acog.org/womens-health/faqs/vulvovaginal-health">ACOG</a>. '+('La zone colorée indique la région concernée, pas un plan opératoire.' if fr else 'The highlighted area identifies the relevant region, not a surgical plan.')+' <a href="/assets/'+asset+'" target="_blank" rel="noopener">'+('Agrandir le schéma ↗' if fr else 'View larger diagram ↗')+'</a></figcaption></figure>'
+   s=re.sub(r'<figure class="editorial-banner wrap image-enhanced">.*?</figure>',diagram,s,count=1,flags=re.S)
  # Style source, question and risk sections without altering their clinical content.
  s=re.sub(r'<section id="(questions|risks|expectations)" class="article-section">',r'<section id="\1" class="article-section guide-highlight">',s)
  s=s.replace('<link rel="stylesheet" href="/assets/elevate.css">','<link rel="stylesheet" href="/assets/elevate.css"><link rel="stylesheet" href="/assets/visual.css">')
