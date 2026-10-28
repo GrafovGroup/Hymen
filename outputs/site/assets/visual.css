@@ -12,3 +12,6 @@
 
 /* Keep every anatomical landmark visible at all screen sizes. */
 .editorial-banner.anatomy-diagram{height:auto;max-width:1000px;background:#fff6f8}.editorial-banner.anatomy-diagram img{height:auto;max-height:none;object-fit:contain}.anatomy-diagram figcaption a{text-decoration:underline}.guide-card-image:has(img[src*="-anatomy"]){height:auto;aspect-ratio:10/7}.guide-card-image img[src*="-anatomy"]{object-fit:contain}.guide-card:hover img[src*="-anatomy"]{transform:none}
+
+/* Coordinated soft rose anatomical artwork. */
+.anatomy-diagram{border:1px solid #eddae2;box-shadow:0 16px 50px #76445c08}.anatomy-diagram>a{display:block}.anatomy-diagram figcaption{max-width:none;border-top:1px solid #ead5de;display:flex;flex-wrap:wrap;gap:5px}.anatomy-diagram figcaption>a:last-child{margin-left:auto}.service-art{margin:-28px -28px 24px;background:#fcf4f5;border-bottom:1px solid #eddae2;overflow:hidden}.service-art img{display:block;width:100%;height:auto;aspect-ratio:10/7;object-fit:contain}.other-service-card{overflow:hidden;border-radius:14px}.guide-card-image{background:#fcf4f5}
