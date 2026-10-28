@@ -2,7 +2,7 @@
 
 ## Implemented
 
-- Enquiry handler identified as the Grafov Group team for hymen.ca, as confirmed by the owner.
+- Enquiry handler identified as the hymen.ca team.
 - Bilingual explanation of form processing and the next step, without promising response time, appointments, clinicians or treatment.
 - Shorter enquiry introduction and expandable privacy detail; explicit contact consent remains visible and required.
 - Larger disclosure, language and submit targets; scrollable mobile menu.

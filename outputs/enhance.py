@@ -53,9 +53,9 @@ for p in SITE.rglob('*.html'):
   s=re.sub(r'<h1>.*?</h1>', '<h1>'+heading+'</h1>',s,count=1,flags=re.S)
   s=re.sub(r'<p class="intro-copy">.*?</p>', '<p class="intro-copy">'+intro+'</p>',s,count=1,flags=re.S)
   process_title='Que se passe-t-il après l’envoi?' if fr else 'What happens after I send this?'
-  process='Votre demande est transmise par Formspree à l’équipe Grafov Group, qui traite les demandes pour hymen.ca. L’équipe peut vous contacter avec les coordonnées fournies pour discuter de votre demande. L’envoi ne confirme ni rendez-vous, ni chirurgien, ni traitement.' if fr else 'Your enquiry is sent through Formspree to the Grafov Group team, which handles enquiries for hymen.ca. The team can contact you using the details you provide to discuss your request. Submitting does not confirm an appointment, surgeon or treatment.'
+  process='Votre demande est transmise par Formspree à l’équipe hymen.ca. L’équipe peut vous contacter avec les coordonnées fournies pour discuter de votre demande. L’envoi ne confirme ni rendez-vous, ni chirurgien, ni traitement.' if fr else 'Your enquiry is sent through Formspree to the hymen.ca team. The team can contact you using the details you provide to discuss your request. Submitting does not confirm an appointment, surgeon or treatment.'
   process_html='<details class="enquiry-process"><summary>'+process_title+'</summary><p>'+process+'</p></details>'
-  owner='Demandes traitées par l’équipe Grafov Group pour hymen.ca.' if fr else 'Enquiries handled by the Grafov Group team for hymen.ca.'
+  owner='Demandes traitées par l’équipe hymen.ca.' if fr else 'Enquiries handled by the hymen.ca team.'
   s=s.replace('<p class="form-intro">','<p class="enquiry-owner">'+owner+'</p>'+process_html+'<p class="form-intro">',1)
   s=re.sub(r'<div class="discretion-note"><h3>(.*?)</h3>(.*?)</div>',r'<details class="discretion-note privacy-disclosure"><summary>\1</summary>\2</details>',s,count=1,flags=re.S)
   # Retain required consent disclosures beside the submit action.
