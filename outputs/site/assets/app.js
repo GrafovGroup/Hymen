@@ -1,6 +1,5 @@
-import {prepare, layout} from './pretext.js';
 
-// All assets are local. No analytics, persistence, or enquiry network requests.
+// Local assets; enquiries are sent only when the visitor submits the form.
 const menuButton = document.querySelector('.menu-button');
 const mobileNav = document.querySelector('#mobile-nav');
 function closeMenu(){mobileNav.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation')}
@@ -8,23 +7,6 @@ menuButton.addEventListener('click',()=>{const open=mobileNav.hidden;mobileNav.h
 mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!mobileNav.hidden){closeMenu();menuButton.focus()}});
 matchMedia('(min-width:901px)').addEventListener('change',e=>{if(e.matches)closeMenu()});
-
-// Pretext provides resize-aware paragraph measurement; natural CSS remains the fallback.
-document.fonts.ready.then(()=>{
-  const elements=[...document.querySelectorAll('.hero-copy,.section-heading>p')];
-  const handles=new Map();
-  function measure(){
-    for(const el of elements){
-      const style=getComputedStyle(el);
-      const key=style.font;
-      let cached=handles.get(el);
-      if(!cached||cached.key!==key){cached={key,handle:prepare(el.textContent,key)};handles.set(el,cached)}
-      const result=layout(cached.handle,el.clientWidth,parseFloat(style.lineHeight));
-      el.style.minHeight=`${Math.ceil(result.height)}px`;
-    }
-  }
-  new ResizeObserver(measure).observe(document.body);measure();
-}).catch(()=>{/* Readable natural text layout remains available. */});
 
 const filters=[...document.querySelectorAll('[data-filter]')];
 const cards=[...document.querySelectorAll('[data-region]')];

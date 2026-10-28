@@ -48,6 +48,22 @@ for p in SITE.rglob('*.html'):
   guidance='Choisissez un sujet et vos coordonnées. Les champs obligatoires sont indiqués par *. Aucune histoire médicale ni photo.' if fr else 'Choose a topic and how to reach you. Required fields are marked *. No medical history or photos.'
   s=s.replace('<form id="consultation-form"','<p class="form-intro">'+guidance+'</p><form id="consultation-form"',1)
   s=s.replace('id="main"','id="main" class="enquiry-main"',1)
+  heading='Commencez par une conversation.' if fr else 'Start with a conversation.'
+  intro='Indiquez un sujet et les coordonnées auxquelles vous souhaitez recevoir une réponse.' if fr else 'Choose a topic and the contact details you are comfortable using for a reply.'
+  s=re.sub(r'<h1>.*?</h1>', '<h1>'+heading+'</h1>',s,count=1,flags=re.S)
+  s=re.sub(r'<p class="intro-copy">.*?</p>', '<p class="intro-copy">'+intro+'</p>',s,count=1,flags=re.S)
+  process_title='Que se passe-t-il après l’envoi?' if fr else 'What happens after I send this?'
+  process='Votre demande est transmise par Formspree à l’équipe Grafov Group, qui traite les demandes pour hymen.ca. L’équipe peut vous contacter avec les coordonnées fournies pour discuter de votre demande. L’envoi ne confirme ni rendez-vous, ni chirurgien, ni traitement.' if fr else 'Your enquiry is sent through Formspree to the Grafov Group team, which handles enquiries for hymen.ca. The team can contact you using the details you provide to discuss your request. Submitting does not confirm an appointment, surgeon or treatment.'
+  process_html='<details class="enquiry-process"><summary>'+process_title+'</summary><p>'+process+'</p></details>'
+  owner='Demandes traitées par l’équipe Grafov Group pour hymen.ca.' if fr else 'Enquiries handled by the Grafov Group team for hymen.ca.'
+  s=s.replace('<p class="form-intro">','<p class="enquiry-owner">'+owner+'</p>'+process_html+'<p class="form-intro">',1)
+  s=re.sub(r'<div class="discretion-note"><h3>(.*?)</h3>(.*?)</div>',r'<details class="discretion-note privacy-disclosure"><summary>\1</summary>\2</details>',s,count=1,flags=re.S)
+  # Retain required consent disclosures beside the submit action.
+  s=re.sub(r'<p class="form-intro">.*?</p>','',s,count=1,flags=re.S)
+  s=s.replace('<section id="submission-success"', '<section id="submission-success"',1)
+ # Serve a smaller hero asset; native CSS text wrapping avoids JS layout work.
+ s=s.replace('src="/assets/rose-anatomy-hero.jpg"', 'src="/assets/rose-hero.webp" srcset="/assets/rose-hero-768.webp 768w, /assets/rose-hero.webp 1536w" sizes="100vw"')
+
  # Real organization/site/page entities only; never claim clinic status or medical review.
  graph=[{'@type':'Organization','@id':'https://hymen.ca/#organization','name':'Hymen.ca Inc.','url':'https://hymen.ca/','logo':'https://hymen.ca/assets/logo.svg'}, {'@type':'WebSite','@id':'https://hymen.ca/#website','url':'https://hymen.ca/','name':'hymen.ca','inLanguage':['en-CA','fr-CA'],'publisher':{'@id':'https://hymen.ca/#organization'}}, {'@type':'WebPage','@id':url+'#webpage','url':url,'name':title,'description':desc,'inLanguage':lang,'isPartOf':{'@id':'https://hymen.ca/#website'}}]
  if not home and p.name!='404.html':graph.append({'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Accueil' if fr else 'Home','item':'https://hymen.ca'+prefix+'/'},{'@type':'ListItem','position':2,'name':name,'item':url}]})
