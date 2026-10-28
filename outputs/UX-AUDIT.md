@@ -27,3 +27,9 @@ First English form field, measured from the top of the page in default disclosur
 Actual Formspree receipt, recipient routing, spam placement and follow-up delivery are not verified. A narrow connected Gmail lookup for Formspree/Hymen notifications failed with a connector rate-limit error. No real test enquiry was sent. The receiving inbox address was not provided.
 
 Owner follow-up: identify the receiving inbox, check Formspree form `myeyblnr` recipient/activation settings, and arrange one explicitly labelled nonmedical test submission and confirm receipt. Do not infer end-to-end delivery from frontend success handling.
+
+## Visual system refinement
+
+The homepage now uses compact navigation shortcuts, three equally sized procedure cards, a compact panel linking all five specialist guides, one consolidated local-care section, and a simpler heading hierarchy. The anatomy illustration remains available in the permanent procedure guides. Clinical caution text, sources and all existing content routes are retained. Risk/question blocks and source lists now have consistent visual separation.
+
+Browser QA: English/French homepages and hymenoplasty guides at 320, 390 and 768 pixel iframe widths showed no horizontal document overflow or completed broken images. Both homepages retain three primary cards and five specialist links. Desktop card proportions and alignment were visually reviewed. Reduced-motion CSS disables new card transforms and transitions.

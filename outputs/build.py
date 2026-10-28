@@ -228,3 +228,5 @@ runpy.run_path(str(OUT.parent / "build_cities.py"), init_globals={"OUT":OUT,"pag
 runpy.run_path(str(OUT.parent / "localize.py"))
 
 runpy.run_path(str(OUT.parent / "enhance.py"))
+
+runpy.run_path(str(OUT.parent / "visual.py"))

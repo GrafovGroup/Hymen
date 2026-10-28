@@ -19,6 +19,7 @@ Deploy `dist/` as the static document root with real 404 handling. `outputs/site
 - English templates: `outputs/build.py`, `outputs/build_cities.py`, `outputs/cities.json`
 - French translation catalogue: `outputs/fr.json`; generation: `outputs/localize.py`
 - Bilingual presentation and metadata: `outputs/enhance.py`
+- Homepage composition and guide styling: `outputs/visual.py`, `outputs/site/assets/visual.css`
 - Styling: `outputs/site/assets/style.css` and `elevate.css`
 - Behaviour: `outputs/site/assets/app.js` (French counterpart generated)
 - Domain and search verification: `outputs/prepare_launch.py`, `outputs/search-verification.json`
