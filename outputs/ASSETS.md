@@ -39,3 +39,13 @@ PNG originals are included alongside the optimized JPEG files. These are editori
 ## Soft logo
 
 Original vector identity at `site/assets/logo.svg`, also provided as `logo.svg`. Botanical paths are hand-authored; the light wordmark uses system Helvetica Neue with Arial fallback. `logo-preview.png` provides a visual reference. This logo was created in SVG rather than with image generation.
+
+## Editorial additions — October 2026
+
+Generated with the built-in image generation tool and exported as locally hosted WebP. These are illustrative scenes, not actual patients or facilities.
+
+- `personal-reflection.webp`: Adult woman, fully clothed in an ivory blouse, reading a notebook at an oak table by a window; rose and ivory palette, soft daylight, realistic editorial photography, no text, logo or clinical equipment. A 768-pixel responsive version is included.
+- `quiet-space.webp`: Sunlit home corner with an ivory armchair, dusty rose throw, oak side table, journal, water and magnolia; natural editorial interior photography, no people, text or clinical equipment. A 768-pixel responsive version is included.
+- `pathway-botanical.webp`, `pathway-questions.webp`, `pathway-canada.webp`: Optimized 600-pixel versions of existing site artwork for homepage navigation cards.
+
+Original generated PNGs are retained in the generating conversation. Published responsive WebP files are under `dist/assets/`; editable project assets are under `outputs/site/assets/`.

@@ -24,6 +24,17 @@ for p in SITE.rglob('*.html'):
   labels=[('hymenoplasty','Comprendre les interventions' if fr else 'Understand procedures','Explorez les guides et les sources.' if fr else 'Explore clear guides and their sources.'),('compare','Comparer mes options' if fr else 'Compare my options','Préparez une décision éclairée.' if fr else 'Make space for an informed decision.'),('cities','Trouver des ressources locales' if fr else 'Find local resources','Consultez les guides de villes au Canada.' if fr else 'Browse city guides across Canada.')]
   cards='<nav class="pathways wrap" aria-label="'+('Par où commencer' if fr else 'Choose your next step')+'">'+''.join(f'<a href="{prefix}/{slug}/"><span class="path-number">0{i+1}</span><strong>{label}</strong><span>{copy}</span><b aria-hidden="true">↗</b></a>' for i,(slug,label,copy) in enumerate(labels))+'</nav>'
   s=re.sub(r'<section class="start-section wrap".*?</section>',cards,s,count=1,flags=re.S)
+ # Editorial imagery: local responsive assets; no clinical/testimonial implication.
+ if home:
+  for slug,asset in [('hymenoplasty','botanical'),('compare','questions'),('cities','canada')]:
+   target=f'<a href="{prefix}/{slug}/"><span class="path-number">'
+   replacement=f'<a href="{prefix}/{slug}/"><img class="pathway-image" src="/assets/pathway-{asset}.webp" alt="" width="600" height="400" loading="lazy" decoding="async"><span class="path-number">'
+   s=s.replace(target,replacement,1)
+  s=re.sub(r'<img class="editorial-inline"[^>]+>', '<figure class="reflection-figure"><img src="/assets/personal-reflection.webp" srcset="/assets/personal-reflection-768.webp 768w, /assets/personal-reflection.webp 1536w" sizes="(max-width: 900px) 90vw, 45vw" alt="'+('Une femme lit un carnet près d’une fenêtre' if fr else 'A woman reading a notebook beside a window')+'" width="1536" height="1024" loading="lazy" decoding="async"><figcaption>'+('Illustration générée par IA; ne représente pas une patiente.' if fr else 'AI-generated illustration; not an actual patient.')+'</figcaption></figure>',s,count=1)
+ if any('/'+slug+'/' in url for slug in ['hymenoplasty','labiaplasty','perineoplasty']):
+  s=re.sub(r'<figure class="editorial-banner wrap">.*?</figure>', '<figure class="editorial-banner wrap image-enhanced"><img src="/assets/quiet-space.webp" srcset="/assets/quiet-space-768.webp 768w, /assets/quiet-space.webp 1536w" sizes="90vw" alt="'+('Un fauteuil ivoire, un plaid rose et un carnet dans une pièce lumineuse' if fr else 'An ivory armchair, rose throw and journal in a sunlit room')+'" width="1536" height="1024" loading="lazy" decoding="async"><figcaption>'+('Du temps pour réfléchir, à votre rythme. Illustration générée par IA.' if fr else 'Space to reflect, at your own pace. AI-generated illustration.')+'</figcaption></figure>',s,count=1,flags=re.S)
+ if '/consultation-guide/' in url or '/about/' in url:
+  s=re.sub(r'<img([^>]*?)src="/assets/consultation.jpg"([^>]*)>', lambda m:'<img'+m[1]+'src="/assets/personal-reflection.webp"'+re.sub(r'alt="[^"]*"','alt="'+('Une femme prend le temps de lire près d’une fenêtre' if fr else 'A woman taking time to read beside a window')+'"',m[2])+'>',s)
  # Bring useful guide text before decorative imagery, keeping the original medical wording.
  article=re.search(r'<section id="[^"]+" class="article-section"><h2>(.*?)</h2><p>(.*?)</p>',s,re.S)
  if article:
